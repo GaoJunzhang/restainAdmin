@@ -1,0 +1,32 @@
+spring:
+  thymeleaf:
+    mode: HTML5
+    cache: false
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://112.74.201.45:3306/test?useUnicode=true&characterEncoding=utf8
+    username: zgj
+    password: zgj1234
+  servlet:
+    multipart:
+      max-file-size: 20Mb
+      max-request-size: 20Mb
+  application:
+    name: restrainAdmin
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+      naming:
+        strategy: org.hibernate.cfg.DefaultComponentSafeNamingStrategy
+    properties:
+             hibernate:
+                dialect: org.hibernate.dialect.MySQL5Dialect
+server:
+  port: 8089
+logging:
+  path: D:\tmp\log\
+  level:
+      xatu.zsl: debug #不同目录下的日志可配置不同级别
+      org.springfromework.web: info
+      org.hibernate: error
